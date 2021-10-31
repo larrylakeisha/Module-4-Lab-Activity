@@ -34,13 +34,18 @@ exam_two = int(input("Input exam grade two: "))
 
 exam_three = int(input("Input exam grade three: "))
 
+#list name : grades
 grade = [exam_one, exam_two, exam_three]
 sum = 0
 
-for grade in grade:
+'''
+loop variable should be different from the list name.
+ grade                                    grades
+'''
+for grade in grade:  # for grade in grades
     sum = sum + grade
 
-avg = sum / grade
+avg = sum / grade   # average = sum/len(grades) :len(grades) returnes the number of elements of the grades list.
 
 letter_grade = grade
 
@@ -48,21 +53,38 @@ if avg >= 90:
     letter_grade = "A"
 elif 80 <= avg < 90:
     letter_grade = "B"
-elif 69 < avg < 80:
+elif 69 < avg < 80:       #  elif 70 <= avg < 80:
     letter_grade = "C"
-elif 69 >= avg >= 65:
+elif 69 >= avg >= 65:      # elif 60 <= avg < 70:
     letter_grade = "D"
-if avg <= 59:
+if avg <= 59:              # elif 0 <= avg < 60:
     letter_grade = "F"
+ 
+'''
+Each exam scores is printed using a for loop.
+Average and letter grade are printed once.
 
-for grade in range(grade):
+for grade in grades:    
+    print("Exam: " + str(grade))
+    
+print("Average: " + str(avg))
+print("Grades: " + str(letter_grade))
+
+'''
+    
+    
+for grade in range(grade):  
     print("Exam: " + str(grade))
 
     print("Average: " + str(avg))
 
     print("Grade: " + str(letter_grade))
 
-if grade != "F":
+'''
+if letter _grade == "F" :
+   print("Student is failing")
+'''
+if grade != "F":        
     print("Student is passing.")
 else:
     print("Student is failing.")
