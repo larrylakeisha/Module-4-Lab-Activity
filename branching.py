@@ -20,8 +20,14 @@ Range:   _________________|1900_____________________|2020_________________
 '''
 if year <= 1900:
     print("Woah, that's the past!")
-elif year > 1900 or year < 2020:           # should be,  elif year > 1900 and year < 2020:
+'''
+elif year > 1900 and year < 2020:           
     print("That's totally the present!")
-if year > 2020:                            # else:
+else:
+    print(Far out, that;s the future!!")
+'''
+elif year > 1900 or year < 2020:           
+    print("That's totally the present!")
+if year > 2020:                            
     print("Far out, that's the future!!")
 
