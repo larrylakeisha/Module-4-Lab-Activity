@@ -11,10 +11,17 @@
 # Created expression for from the far future
 
 year = int(input("Greetings What is your year of origin?"))
+'''
+Range:   _________________|1900_____________________|2020_________________
+           past                  present                     future
 
+            year <= 1900         1900 < year < 2020      year >= 2020
+                                                         
+'''
 if year <= 1900:
     print("Woah, that's the past!")
-elif year > 1900 or year < 2020:
+elif year > 1900 or year < 2020:           # should be,  elif year > 1900 and year < 2020:
     print("That's totally the present!")
-if year > 2020:
+if year > 2020:                            # else:
     print("Far out, that's the future!!")
+
